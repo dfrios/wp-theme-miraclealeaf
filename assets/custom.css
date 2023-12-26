@@ -1,0 +1,26 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.menu-items ul {
+  display: flex;
+}
+
+.menu-items li {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#menu-mobile li {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+
+/* Breakpoint XL */
+@media (min-width: 1024px) {
+  .menu-items li {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+}
