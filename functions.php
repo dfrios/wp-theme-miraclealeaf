@@ -3,18 +3,20 @@
  * @package MiracleLeaf
  */
 
+include_once('functions-woocommerce.php');
+
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
 // Register navigation menu
-function add_menu() {
+function miracleleaf_add_menu() {
   register_nav_menu('header-menu',__('Header Menu'));
 }
 
 // Register logo capability
-function site_logo($wp_customize) {
+function miracleleaf_site_logo($wp_customize) {
 
   //Settings
   $wp_customize->add_setting('site_logo');//Setting for logo uploader
@@ -34,5 +36,6 @@ function site_logo($wp_customize) {
 }
 
 
-add_action('init', 'add_menu' );
-add_action('customize_register', 'site_logo');
+
+add_action('init', 'miracleleaf_add_menu' );
+add_action('customize_register', 'miracleleaf_site_logo');

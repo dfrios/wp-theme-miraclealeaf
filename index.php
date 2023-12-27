@@ -9,7 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 get_header();
-get_template_part( 'parts/page' );
+get_template_part('parts/page');
 get_footer();
 
-?>

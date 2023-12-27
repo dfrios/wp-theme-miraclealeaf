@@ -16,6 +16,67 @@ html {
   margin-bottom: 1.25rem;
 }
 
+#woocommerce .wp-post-image {
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 10px #293429;
+}
+
+#woocommerce .product_title {
+	font-size: 1.5rem;
+	font-weight: bold;
+  font-family: Poppins, sans-serif;
+}
+
+#woocommerce h2 {
+	font-size: 1.25rem;
+	font-weight: bold;
+  font-family: Poppins, sans-serif;
+}
+
+#woocommerce .price {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+	font-size: 1.25rem;
+}
+
+#woocommerce .woocommerce-product-details__short-description {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#woocommerce a.add_to_cart_button {
+  display: block;
+  transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-radius: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 52 41 / var(--tw-bg-opacity));
+  padding: .75rem 1.25rem;
+  font-family: Poppins,sans-serif;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;
+  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;
+  transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
+  width: 11.25rem;
+  margin-bottom: 4rem;
+}
+
+#woocommerce .related .attachment-woocommerce_thumbnail {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0px 0px 10px #293429;
+}
+
 
 /* Breakpoint XL */
 @media (min-width: 1024px) {

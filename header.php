@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <meta property="og:locale" content="es" />
 
     <!-- Meta Pixel Code -->
-    <script>
+    <!-- <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -37,10 +37,10 @@ if ( ! defined( 'ABSPATH' ) ) {
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', 'XXXXX');
       fbq('track', 'PageView');
-    </script>
-    <noscript>
+    </script> -->
+    <!-- <noscript>
       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=XXXXX&ev=PageView&noscript=1" />
-    </noscript>
+    </noscript> -->
     <!-- End Meta Pixel Code -->
     <link rel="stylesheet" crossorigin href="<?php bloginfo('template_directory') ?>/assets/index-YT03m4eW.css">
     <link rel="stylesheet" crossorigin href="<?php bloginfo('template_directory') ?>/assets/custom.css">
@@ -52,11 +52,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- BEGIN HEADER -->
     <header class="flex flex-row max-w-7xl mx-auto mt-10 px-4 py-10 bg-beige">
       <div id="logo" class="text-center basis-4/5 sm:basis-1/5 md:basis-1/4">
-        <?php
-        if (get_theme_mod('site_logo'))
-          echo '<img src=' . get_theme_mod('site_logo') . '" alt="" class="max-w-[50%] mx-auto" />';
-        ?>
-        <!-- <img src="<?php bloginfo('template_directory') ?>/assets/logo-lIQa2J-u.webp" alt="" class="max-w-[50%] mx-auto" /> -->
+        <a href="/" alt="Inicio">
+          <?php
+          if (get_theme_mod('site_logo'))
+            echo '<img src=' . get_theme_mod('site_logo') . '" alt="" class="max-w-[50%] mx-auto" />';
+          ?>
+        </a>
       </div>
       <div class="basis-1/5 text-right sm:basis-4/5 md:basis-3/4">
 
@@ -69,15 +70,6 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="fixed top-0 right-0 z-40 h-full w-full translate-x-full overflow-y-auto overscroll-y-none transition duration-500 peer-checked:translate-x-0">
               <div class="float-right min-h-full w-[85%] bg-white px-6 pt-32 shadow-2xl">
                 <?php wp_nav_menu(array('header-menu' => 'header-menu')); ?>
-                <!-- <div class="menu-menu-superior-container">
-                  <ul id="menu-menu-superior" class="menu">
-                    <li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12 my-5"><a href="#!">Inicio</a></li>
-                    <li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13 my-5"><a href="#!">Sobre nosotros</a></li>
-                    <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14 my-5"><a href="#!">Blog</a></li>
-                    <li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15 my-5"><a href="#!">Preguntas</a></li>
-                    <li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16 my-5"><a href="#!">Contacto</a></li>
-                  </ul>
-                </div> -->
                 <div id="cart-mobile" class="">
                   <img src="data:image/webp;base64,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" alt="" class="max-w-[12%] float-right" />
                 </div>    
@@ -91,15 +83,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         <nav id="menu-desktop" class="text-base text-right justify-end uppercase text-green hidden sm:flex">
           <div class="menu-items">
             <?php wp_nav_menu(array('header-menu' => 'header-menu')); ?>
-            <!-- <div class="menu-menu-superior-container">
-              <ul id="menu-menu-superior" class="menu flex">
-                <li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12 mx-2 lg:mx-3"><a href="#!">Inicio</a></li>
-                <li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13 mx-2 lg:mx-3"><a href="#!">Sobre nosotros</a></li>
-                <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14 mx-2 lg:mx-3"><a href="#!">Blog</a></li>
-                <li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15 mx-2 lg:mx-3"><a href="#!">Preguntas</a></li>
-                <li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16 mx-2 lg:mx-3"><a href="#!">Contacto</a></li>
-              </ul>
-            </div> -->
           </div>
           <div id="cart-desktop" class="ml-4">
             <img src="data:image/webp;base64,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" alt="" class="max-w-[50%]" />

@@ -31,5 +31,6 @@ get_header();
     </footer>
     <!-- END FOOTER -->
 
+    <?php wp_footer(); ?>
   </body>
 </html>
