@@ -55,7 +55,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="/" alt="Inicio">
           <?php
           if (get_theme_mod('site_logo'))
-            echo '<img src=' . get_theme_mod('site_logo') . '" alt="" class="max-w-[50%] mx-auto" />';
+            echo '<img src="' . get_theme_mod('site_logo') . '" alt="" class="max-w-[50%] mx-auto" />';
           ?>
         </a>
       </div>
