@@ -59,5 +59,21 @@ function miracleleaf_woocommerce_product_loop_start() {
 add_filter('woocommerce_product_loop_start', 'miracleleaf_woocommerce_product_loop_start');
 
 
+
+/**
+ * Function for `woocommerce_quantity_input_classes` filter-hook.
+ * 
+ * @param  $array   
+ * @param  $product 
+ *
+ * @return 
+ */
+function miracleleaf_woocommerce_quantity_input_classes_filter($array, $product){
+
+	return array('w-16', 'h-10', 'border-green-dark', 'border-2', 'text-center');
+}
+add_filter('woocommerce_quantity_input_classes', 'miracleleaf_woocommerce_quantity_input_classes_filter', 10, 2);
+
+
 // Disable WooCommerce styles
 add_filter('woocommerce_enqueue_styles', '__return_false');
