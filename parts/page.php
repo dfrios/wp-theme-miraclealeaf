@@ -54,41 +54,27 @@ if ( ! defined( 'ABSPATH' ) ) {
             <hr class="mx-auto md:w-[40vw] lg:w-[25vw]" />
           </div>
           <div class="flex flex-col text-center mt-14 sm:flex-row sm:flex-wrap sm:justify-evenly">
-            <article class="front-article" itemscope itemtype="http://schema.org/Product">
-              <a href="/producto/shampoo-cbd"><img src="<?php bloginfo('template_directory') ?>/assets/shampoo-ik-dN31D.webp" alt="" class="mx-auto" /></a>
-              <a href="/producto/shampoo-cbd"><h3 class="text-xl mt-4 capitalize" itemprop="name">shampoo CBD</h3></a>
-              <div class="mt-6">
-                <a href="/producto/shampoo-cbd" class="btn-product">Más información</a>
-              </div>
-            </article>
-            <article class="front-article" itemscope itemtype="http://schema.org/Product">
-              <a href="/producto/acondicionador-cbd"><img src="<?php bloginfo('template_directory') ?>/assets/rinse-jhSV59ZW.webp" alt="" class="mx-auto" /></a>
-              <a href="/producto/acondicionador-cbd"><h3 class="text-xl mt-4 capitalize" itemprop="name">Acondicionador CBD</h3></a>
-              <div class="mt-6">
-                <a href="/producto/acondicionador-cbd" class="btn-product">Más información</a>
-              </div>
-            </article>
-            <article class="front-article" itemscope itemtype="http://schema.org/Product">
-              <a href="#!"><img src="<?php bloginfo('template_directory') ?>/assets/drops-BaNurlgH.webp" alt="" class="mx-auto" /></a>
-              <a href="#!"><h3 class="text-xl mt-4 capitalize" itemprop="name">Gotas CBD</h3></a>
-              <div class="mt-6">
-                <a href="#!" class="btn-product">Más información</a>
-              </div>
-            </article>
-            <article class="front-article" itemscope itemtype="http://schema.org/Product">
-              <a href="#!"><img src="<?php bloginfo('template_directory') ?>/assets/ointment-yHc7vbgc.webp" alt="" class="mx-auto" /></a>
-              <a href="#!"><h3 class="text-xl mt-4 capitalize" itemprop="name">Ungüento corporal</h3></a>
-              <div class="mt-6">
-                <a href="#!" class="btn-product">Más información</a>
-              </div>
-            </article>
-            <article class="front-article" itemscope itemtype="http://schema.org/Product">
-              <a href="#!"><img src="<?php bloginfo('template_directory') ?>/assets/massager-ku9Uc0K3.webp" alt="" class="mx-auto" /></a>
-              <a href="#!"><h3 class="text-xl mt-4 capitalize" itemprop="name">Masajeador</h3></a>
-              <div class="mt-6">
-                <a href="#!" class="btn-product">Más información</a>
-              </div>
-            </article>
+
+            <?php
+              $products = wc_get_products(array(
+                'status' => 'publish',
+                'orderby' => 'rand',
+                'stockstatus' => 'instock',
+              ));
+
+              foreach ($products as $product) {
+            ?>
+              <article class="front-article" itemscope itemtype="http://schema.org/Product">
+                <a href="<?= $product->get_permalink() ?>"><?= $product->get_image('woocommerce_full', array('class'=>'mx-auto')) ?></a>
+                <a href="<?= $product->get_permalink() ?>"><h3 class="text-xl mt-4 capitalize" itemprop="name"><?= $product->get_name() ?></h3></a>
+                <div class="mt-6">
+                  <a href="<?= $product->get_permalink() ?>" class="btn-product">Más información</a>
+                </div>
+              </article>
+            <?php
+              }
+            ?>
+            
           </div>
         </div>
       </section>
