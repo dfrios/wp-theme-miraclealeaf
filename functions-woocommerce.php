@@ -59,20 +59,23 @@ function miracleleaf_woocommerce_product_loop_start() {
 add_filter('woocommerce_product_loop_start', 'miracleleaf_woocommerce_product_loop_start');
 
 
-
-/**
- * Function for `woocommerce_quantity_input_classes` filter-hook.
- * 
- * @param  $array   
- * @param  $product 
- *
- * @return 
- */
+// Add style classes to quantity input field
 function miracleleaf_woocommerce_quantity_input_classes_filter($array, $product){
 
 	return array('w-16', 'h-10', 'border-green-dark', 'border-2', 'text-center');
 }
 add_filter('woocommerce_quantity_input_classes', 'miracleleaf_woocommerce_quantity_input_classes_filter', 10, 2);
+
+
+// Add style classes to price when it has any discount
+function miracleleaf_woocommerce_format_sale_price($price, $regular_price, $sale_price) {
+
+	$price = '<del aria-hidden="true">' . ( is_numeric( $regular_price ) ? wc_price( $regular_price ) : $regular_price ) . '</del> <ins class="no-underline bg-yellow-100 py-1 px-2">' . ( is_numeric( $sale_price ) ? wc_price( $sale_price ) : $sale_price ) . '</ins>';
+
+  return $price;
+
+}
+add_filter('woocommerce_format_sale_price', 'miracleleaf_woocommerce_format_sale_price', 10, 3);
 
 
 // Disable WooCommerce styles

@@ -29,10 +29,14 @@ html {
   font-family: Poppins, sans-serif;
 }
 
-#woocommerce h2 {
-	font-size: 1.25rem;
+#woocommerce .related h2 {
+  font-size: 1.75rem;
 	font-weight: bold;
   font-family: Poppins, sans-serif;
+}
+
+#woocommerce li h2 {
+	font-size: 1.25rem !important;
 }
 
 #woocommerce .price {
@@ -77,6 +81,7 @@ html {
   margin-bottom: 0.5rem;
   box-shadow: 0px 0px 10px #293429;
 }
+
 
 
 /* Breakpoint XL */

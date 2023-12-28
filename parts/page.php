@@ -25,9 +25,10 @@ if ( ! defined( 'ABSPATH' ) ) {
           <div class="text-green text-lg my-5 lg:text-2xl">
             por eso nuestros productos están <br/>
             desarrollados a base de componentes <br/>
-            naturales, libres de químicos.
+            naturales, libres de químicos.<br/>
+            Así buscamos inspirarte a cuidarte de una forma integral: cuerpo, mente y espíritu.
           </div>
-          <div class="mt-10 lg:mt-20">
+          <div class="mt-10 lg:mt-12">
             <a href="#!" class="btn-primary">Compra ahora</a>
           </div>
           <div class="mt-8 lg:mt-10">
@@ -74,7 +75,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <?php
               }
             ?>
-            
+
           </div>
         </div>
       </section>
@@ -89,17 +90,13 @@ if ( ! defined( 'ABSPATH' ) ) {
               <span class="text-6xl">milagrosa</span>
             </h1>
             <p class="content text-center text-white mb-8 sm:text-left">
-              Miracle Leaf nació en Medellín en 2021, con el 
-              propósito de contribuir en el cuidado de nuestro 
-              cuerpo a través de productos naturales a base de CBD.
+              Miracle Leaf nació en Medellín en 2021, con el propósito de contribuir en el cuidado de
+              nuestro cuerpo a través de productos naturales a base de CBD.
             </p>
             <p class="content text-white text-center mb-12 sm:text-left sm:hidden lg:block">
-              Con nuestros productos queremos transmitir y 
-              evidenciar los beneﬁcios que tiene el Cannabis como 
-              uso medicinal. Actualmente hemos desarrollado 4 productos: 
-              2 con beneﬁcios capilares como lo son nuestro 
-              shampoo y acondicionador, nuestras gotas de CBD y 
-              el ungüento corporal.
+              Con nuestros productos queremos transmitir y evidenciar los beneficios que tiene el Cannabis como uso medicinal.
+              Actualmente hemos desarrollado 4 productos: dos con beneficios capilares como lo son nuestro shampoo y acondicionador,
+              nuestras gotas de CBD y el ungüento corporal.
             </p>
           </div>
           <div id="stripe-right" class="basis-3/5">
