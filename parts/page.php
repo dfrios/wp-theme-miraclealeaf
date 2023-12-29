@@ -83,7 +83,7 @@ $products = wc_get_products(array(
               foreach ($products as $product) {
             ?>
               <article class="front-article" itemscope itemtype="http://schema.org/Product">
-                <a href="<?= $product->get_permalink() ?>"><?= $product->get_image('woocommerce_full', array('class'=>'mx-auto')) ?></a>
+                <a href="<?= $product->get_permalink() ?>"><?= $product->get_image('woocommerce_thumbnail', array('class'=>'mx-auto')) ?></a>
                 <a href="<?= $product->get_permalink() ?>"><h3 class="text-xl mt-4 capitalize" itemprop="name"><?= $product->get_name() ?></h3></a>
                 <div class="mt-6">
                   <a href="<?= $product->get_permalink() ?>" class="btn-product">Más información</a>

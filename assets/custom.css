@@ -19,7 +19,8 @@ html {
   margin-bottom: 1.25rem;
 }
 
-#woocommerce .wp-post-image {
+#woocommerce .wp-post-image,
+section#productos img {
 	margin-left: auto;
 	margin-right: auto;
 	box-shadow: -2px 2px 6px #29342988;
@@ -92,5 +93,8 @@ html {
   .menu-items li {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
+  }
+  .front-article {
+	  width: 17vw;
   }
 }
