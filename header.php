@@ -7,16 +7,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
-// $cart = WC()->cart;
-// var_dump( $cart->get_cart_item_quantities() );
-// var_dump( $cart->get_cart_contents_count() );
-
-// $products = $cart->get_cart();
-// var_dump($products);
-// foreach ( $products as $product ) {
-//   var_dump( $product['data']->get_name() );
-// }
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <!-- End Meta Pixel Code -->
     <link rel="stylesheet" crossorigin href="<?php bloginfo('template_directory') ?>/assets/index-YT03m4eW.css">
     <link rel="stylesheet" crossorigin href="<?php bloginfo('template_directory') ?>/assets/custom.css">
+    <link rel="stylesheet" crossorigin href="<?php bloginfo('template_directory') ?>/assets/flickity.min.css">
     <?php wp_head(); ?>
   </head>
   

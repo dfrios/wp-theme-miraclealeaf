@@ -7,6 +7,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+
+$products = wc_get_products(array(
+  'status' => 'publish',
+  'orderby' => 'rand',
+  'stockstatus' => 'instock',
+));
+
+
 ?>
 
     <!-- BEGIN MAIN -->
@@ -36,13 +44,28 @@ if ( ! defined( 'ABSPATH' ) ) {
           </div>
         </div>
         <div id="front-right" class="mt-14 mb-10 text-center sm:basis-1/2 ">
+          <!-- BEGIN DESKTOP CAROUSE -->
           <!-- <div class="z-0 h-1/2 w-[70%] absolute hidden left-[50%] mt-[-90px] bg-no-repeat bg-left bg-contain bg-[url('../../src/img/background-carousel-tablet.webp')] sm:block lg:bg-[url('../../src/img/background-carousel-desktop.webp')] lg:h-full lg:w-full lg:mt-[-120px] lg:mr-10"></div> -->
           <div class="z-0 right-0 w-[55%] mt-[-80px] absolute hidden sm:block">
             <img src="<?php bloginfo('template_directory') ?>/assets/background-carousel-bCm19B-e.webp" alt="" class="w-full" />
           </div>
+          <!-- END DESKTOP CAROUSEL -->
+          <!-- BEGIN MOBILE CAROUSEL -->
           <div class="sm:z-10 sm:relative sm:mt-[-40px] sm:pl-8">
-            <img src="<?php bloginfo('template_directory') ?>/assets/carousel-5YW2-63l.webp" alt="" class="rounded-lg">
+            <!-- <img src="<?php bloginfo('template_directory') ?>/assets/carousel-5YW2-63l.webp" alt="" class="rounded-lg"> -->
+            <div class="carousel" data-flickity='{ "lazyLoad": true, "autoPlay": true, "wrapAround": true }'>
+              <?php
+                foreach ($products as $product) {
+              ?>
+              <div class="carousel-cell bg-white">
+                <img class="carousel-cell-image" data-flickity-lazyload="<?= wp_get_attachment_image_url($product->get_image_id(), 'full') ?>" alt="" />
+              </div>
+              <?php
+                }
+              ?>
+            </div>
           </div>
+          <!-- END MOBILE CAROUSEL -->
         </div>
       </section>
       <!-- END FRONT -->
@@ -57,12 +80,6 @@ if ( ! defined( 'ABSPATH' ) ) {
           <div class="flex flex-col text-center mt-14 sm:flex-row sm:flex-wrap sm:justify-evenly">
 
             <?php
-              $products = wc_get_products(array(
-                'status' => 'publish',
-                'orderby' => 'rand',
-                'stockstatus' => 'instock',
-              ));
-
               foreach ($products as $product) {
             ?>
               <article class="front-article" itemscope itemtype="http://schema.org/Product">

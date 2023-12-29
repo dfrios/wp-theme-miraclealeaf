@@ -32,5 +32,7 @@ get_header();
     <!-- END FOOTER -->
 
     <?php wp_footer(); ?>
+
+    <script src="<?php bloginfo('template_directory') ?>/assets/flickity.pkgd.min.js"></script>
   </body>
 </html>

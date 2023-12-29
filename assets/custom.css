@@ -1,3 +1,6 @@
+@import url("carousel.css");
+
+
 html {
   scroll-behavior: smooth;
 }
