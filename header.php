@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=XXXXX&ev=PageView&noscript=1" />
     </noscript> -->
     <!-- End Meta Pixel Code -->
-    <link rel="stylesheet" crossorigin href="<?php bloginfo('template_directory') ?>/assets/index-YT03m4eW.css">
+    <link rel="stylesheet" crossorigin href="<?php bloginfo('template_directory') ?>/assets/index-3-p7Cqnq.css">
     <link rel="stylesheet" crossorigin href="<?php bloginfo('template_directory') ?>/assets/custom.css">
     <link rel="stylesheet" crossorigin href="<?php bloginfo('template_directory') ?>/assets/flickity.min.css">
     <?php wp_head(); ?>

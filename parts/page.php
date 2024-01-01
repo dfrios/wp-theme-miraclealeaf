@@ -166,6 +166,46 @@ $products = wc_get_products(array(
       </section>
       <!-- END FAQS -->
 
+      <!-- BEGIN TESTIMONIALS -->
+      <section id="testimonios">
+        <div class="max-w-7xl mx-auto sm:w-[90%] lg:w-[50%]">
+          <div class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                    <div class="mt-10 px-3">
+                      <img src="<?php bloginfo('template_directory') ?>/assets/testimonials-top-Mq-pRY3u.webp" class="w-max" alt="" />
+                    </div>
+                    <div class="px-3 text-white">
+                      <div class="name uppercase text-center font-poppins bg-green-dark font-bold pt-4">
+                        Nombre Persona
+                      </div>
+                      <div class="text-center bg-green-dark py-6">
+                        <img src="data:image/webp;base64,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" class="w-1/2 mx-auto sm:w-1/3" alt="" />
+                      </div>
+                      <div class="message text-center text-base bg-green-dark px-5 sm:px-8 lg:px-12">
+                        "Hace unos meses empecé a notar que mi cabello se estaba adelgazando, así que decidí probar el shampoo de Miracle Leaf Colombia para la caída del cabello.
+                        Desde la primera vez que lo usé noté la diferencia: cabello se sentía más grueso y voluminoso. Después de usarlo durante unas semanas mi cabello comenzó
+                        a creer en áreas donde antes había notado una disminución.<br/>
+                        ¡Realmente estoy impresionado con los restaurantes!"
+                      </div>
+                      <div class="text-center bg-green-dark py-6">
+                        <img src="<?php bloginfo('template_directory') ?>/assets/testimonials-01-ZsXyrSsG.webp" class="w-1/2 mx-auto" alt="" />
+                      </div>
+                    </div>
+                    <div class="mx-auto px-3">
+                      <img src="<?php bloginfo('template_directory') ?>/assets/testimonials-bottom-qEAoTaEP.webp" class="w-max" alt="" />
+                    </div>
+                </li>
+                <!-- <li class="splide__slide">Slide 02</li> -->
+                <!-- <li class="splide__slide">Slide 03</li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END TESTIMONIALS -->
+
       <!-- BEGIN CONTACT FORM -->
       <section id="contacto" class="py-12 sm:pt-20">
         <div class="max-w-7xl mx-auto px-10 lg:px-32">
