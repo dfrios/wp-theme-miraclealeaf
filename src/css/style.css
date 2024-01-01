@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+@import url('./splide-core.min.css');
+@import url('./splide.min.css');
+@import url('./splide.custom.css');
+
 
 @tailwind base;
 @tailwind components;
@@ -24,4 +28,3 @@
     @apply text-center mb-24 sm:w-[25vw] lg:w-[15vw] 2xl:w-[13vw] 3xl:w-[11vw]
   }
 }
-
