@@ -39,9 +39,9 @@ $products = wc_get_products(array(
           <div class="mt-10 lg:mt-12">
             <a href="#!" class="btn-primary">Compra ahora</a>
           </div>
-          <div class="mt-8 lg:mt-10">
+          <!-- <div class="mt-8 lg:mt-10">
             <a href="#!" class="btn-secondary">Más información</a>
-          </div>
+          </div> -->
         </div>
         <div id="front-right" class="mt-14 mb-10 text-center sm:basis-1/2 ">
           <!-- BEGIN DESKTOP CAROUSE -->
