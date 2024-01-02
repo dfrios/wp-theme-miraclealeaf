@@ -9,6 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 get_header();
-get_template_part('parts/page');
+
+if (get_the_content()) 
+	get_template_part('parts/page');
+else
+	get_template_part('parts/home');
+
 get_footer();
 

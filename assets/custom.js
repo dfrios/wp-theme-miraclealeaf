@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var splide = new Splide('.splide');
-  splide.mount();
+
+  const splideClassElement = document.getElementsByClassName('splide');
+  
+  if (splideClassElement.length > 0) {
+    const splide = new Splide('.splide');
+    splide.mount();
+  }
 });

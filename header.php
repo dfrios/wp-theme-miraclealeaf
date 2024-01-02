@@ -71,7 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
               <div class="float-right min-h-full w-[85%] bg-white px-6 pt-32 shadow-2xl">
                 <?php wp_nav_menu(array('header-menu' => 'header-menu')); ?>
                 <div id="cart-mobile" class="">
-                  <a href="#!">
+                  <a href="/cart">
                     <?php
                       $cart = WC()->cart;
                       $quantity = $cart->get_cart_contents_count();
@@ -95,7 +95,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <?php wp_nav_menu(array('header-menu' => 'header-menu')); ?>
           </div>
           <div id="cart-desktop" class="ml-4">
-            <a href="#!">
+            <a href="/cart">
               <?php
                 $cart = WC()->cart;
                 $quantity = $cart->get_cart_contents_count();
