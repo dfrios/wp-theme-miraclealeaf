@@ -253,7 +253,6 @@
 
       <!-- BEGIN TESTIMONIALS -->
       <section id="testimonios">
-        
         <div class="max-w-7xl mx-auto sm:w-[90%] lg:w-[50%]">
           <div class="splide">
             <div class="splide__track">
@@ -330,11 +329,64 @@
           <img src="src/img/wa.webp" class="h-8 lg:h-10" alt="WhatsApp" />
         </div> -->
       </div>
-      <div id="copyright" class="mt-4">©2023</div>
-      <div id="other">Miracle Leaf | Políticas de devolución</div>
+      <div id="copyright" class="mt-4">©2023 Miracle Leaf</div>
+      <div id="other">
+        <a href="#!" id="a-return-policies" data-id="return-policy-modal" class="underline decoration-dotted">Política de reembolso y garantía</a><br/>
+        <a href="#!" id="a-shipping-policies" data-id="shipping-policy-modal" class="underline decoration-dotted">Política de envío</a>
+      </div>
     </footer>
     <!-- END FOOTER -->
 
+
+    <!-- BEGIN RETURN POLICIES POPUP -->
+    <div id="return-policy-modal" class="modal top-[-97vh] sm:top-[-87vh]" role="dialog" tabindex="-1">
+      <div class="modal-inner bg-white bg-[url('../../src/img/background.webp')] bg-[length:50%]">
+        <img src="src/img/return-popup-corner.webp" alt="" class="absolute w-24 ml-[calc(-1rem-2px)] mt-[calc(-1rem-2px)]" />
+        <div class="modal-border bg-beige p-4">
+          <div class="modal-header">
+            <h3 class="mx-auto text-center text-2xl mb-3 mt-14">Política de reembolso y garantía</h3>
+            <button class="modal-close" data-id="return-policy-modal" aria-label="Close">
+              &times;
+            </button>
+          </div>
+          <p class="text-sm">
+            En el caso de productos que sean mercancías irrevocables no-tangibles, no realizamos reembolsos después de que se
+            envíe el producto, usted tiene la responsabilidad de entender antes de comprarlo. Le pedimos que lea
+            cuidadosamente antes de realizar su compra. Hacemos solamente excepciones con esta regla cuando la descripción
+            no se ajusta al producto. Hay algunos productos que pudieran tener garantía y posibilidad de reembolso pero este
+            será especiﬁcado al comprar el producto. En tales casos la garantía sólo cubrirá fallas de fábrica y sólo se hará efectiva
+            cuando el producto se haya usado correctamente. La garantía no cubre averías o daños ocasionados por uso indebido.
+            Los términos de la garantía están asociados a fallas de fabricación y funcionamiento en condiciones normales de los
+            productos y sólo se harán efectivos estos términos si el equipo ha sido usado correctamente. Esto incluye: • De
+            acuerdo a las especiﬁcaciones técnicas indicadas para cada producto. • En condiciones ambientales acorde con las
+            especiﬁcaciones indicadas por el fabricante. • En uso especíﬁco para la función con que fue diseñado de fábrica. • En
+            condiciones de operación eléctrica acorde con las especiﬁcaciones y tolerancias indicadas.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- END RETURN POLICIES POPUP -->
+
+    <!-- BEGIN SHIPPING POLICIES POPUP -->
+    <div id="shipping-policy-modal" class="modal top-[-97vh] sm:top-[-87vh]" role="dialog" tabindex="-1">
+      <div class="modal-inner bg-white bg-[url('../../src/img/background.webp')] bg-[length:50%]">
+        <img src="src/img/return-popup-corner.webp" alt="" class="absolute w-24 ml-[calc(-1rem-2px)] mt-[calc(-1rem-2px)]" />
+        <div class="modal-border bg-beige p-4">
+          <div class="modal-header">
+            <h3 class="mx-auto text-center text-2xl mb-3 mt-14">Política de envío</h3>
+            <button class="modal-close-shipping" data-id="shipping-policy-modal" aria-label="Close">
+              &times;
+            </button>
+          </div>
+          <p class="text-sm">
+            Los envíos se realizan desde la ciudad de Medellín: fuera de la ciudad deben ser pagados antes de ser procesados.
+            Medellín y sus alrededores tienen la opción de elegir pago contra-entrega, cancelando su compra en el momento que
+            el mensajero entrega el pedido.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- END SHIPPING POLICIES POPUP -->
 
     <!-- BEGIN WOOCOMMERCE -->
     <div class="flex-wrap flex flex-row gap-x-9 gap-y-3 my-4 items-center mt-8 pt-8 border-t-2 border-green-dark border-solid sm:mt-8 sm:gap-x-12 sm:justify-center bg-yellow-400"></div>
