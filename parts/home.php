@@ -37,7 +37,7 @@ $products = wc_get_products(array(
             Así buscamos inspirarte a cuidarte de una forma integral: cuerpo, mente y espíritu.
           </div>
           <div class="mt-10 lg:mt-12">
-            <a href="#!" class="btn-primary">Compra ahora</a>
+            <a href="/shop" class="btn-primary">Compra ahora</a>
           </div>
           <!-- <div class="mt-8 lg:mt-10">
             <a href="#!" class="btn-secondary">Más información</a>

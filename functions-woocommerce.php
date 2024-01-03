@@ -54,7 +54,7 @@ add_filter('woocommerce_single_product_image_thumbnail_html', 'miracleleaf_remov
 
 // Start HTML tag for product list
 function miracleleaf_woocommerce_product_loop_start() {
-  echo '<ul class="flex flex-col items-center flex-wrap sm:flex-row sm:justify-center sm:gap-x-12">';
+  echo '<ul class="flex flex-col items-center flex-wrap sm:flex-row sm:justify-center sm:gap-x-12 sm:items-start">';
 }
 add_filter('woocommerce_product_loop_start', 'miracleleaf_woocommerce_product_loop_start');
 

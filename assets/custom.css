@@ -59,7 +59,8 @@ a.wc-block-cart__submit-button,
 a.wc-block-components-totals-coupon-link,
 button.wc-block-components-totals-coupon__button,
 button.wc-block-components-checkout-place-order-button,
-a.wc-block-components-checkout-return-to-cart-button {
+a.wc-block-components-checkout-return-to-cart-button,
+a.added_to_cart {
   display: block;
   transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   border-radius: 1.5rem;
