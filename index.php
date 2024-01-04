@@ -1,6 +1,6 @@
 <?php
 /**
- * @package MiracleLeaf
+ * @package MiracleLeafPosts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 if (get_the_content()) 
-	get_template_part('parts/page');
+	get_template_part('parts/post');
 else
 	get_template_part('parts/home');
 

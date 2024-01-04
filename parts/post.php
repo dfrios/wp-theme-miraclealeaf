@@ -1,6 +1,6 @@
 <?php
 /**
- * @package MiracleLeaf
+ * @package MiracleLeafPosts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

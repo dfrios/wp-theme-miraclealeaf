@@ -1,6 +1,6 @@
 <?php
 /**
- * @package MiracleLeaf
+ * @package MiracleLeafPosts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -91,8 +91,8 @@ get_header();
 
     <?php wp_footer(); ?>
 
-    <script crossorigin src="<?php bloginfo('template_directory') ?>/assets/flickity.pkgd.min.js"></script>
-    <script crossorigin src="<?php bloginfo('template_directory') ?>/assets/splide.min.js"></script>
+    <!-- <script crossorigin src="<?php bloginfo('template_directory') ?>/assets/flickity.pkgd.min.js"></script> -->
+    <!-- <script crossorigin src="<?php bloginfo('template_directory') ?>/assets/splide.min.js"></script> -->
     <script crossorigin src="<?php bloginfo('template_directory') ?>/assets/custom.js"></script>
   </body>
 </html>
