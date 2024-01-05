@@ -51,7 +51,7 @@ $products = wc_get_products(array(
           </div>
           <!-- END DESKTOP CAROUSEL -->
           <!-- BEGIN MOBILE CAROUSEL -->
-          <div class="sm:z-10 sm:relative sm:mt-[-40px] sm:pl-8">
+          <div class="sm:z-10 sm:relative sm:mt-[-40px] hidden sm:pl-8 sm:block">
             <!-- <img src="<?php bloginfo('template_directory') ?>/assets/carousel-5YW2-63l.webp" alt="" class="rounded-lg"> -->
             <div class="carousel" data-flickity='{ "lazyLoad": true, "autoPlay": true, "wrapAround": true }'>
               <?php
