@@ -297,12 +297,12 @@
       <section id="contacto" class="py-12 sm:pt-20">
         <div class="max-w-7xl mx-auto px-10 lg:px-32">
           <h2 class="text-center text-5xl mb-3">Contáctanos</h2>
-          <form class="mt-10">
+          <form class="mt-10" method="post">
             <input type="text" name="name" id="name" placeholder="Nombre y apellidos" class="my-2 w-full bg-beige h-14 px-3 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-brown focus:ring-opacity-50" />
             <input type="email" name="email" id="email" placeholder="Correo" class="my-2 w-full bg-beige h-14 px-3 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-brown focus:ring-opacity-50" />
             <input type="tel" name="cellphone" id="cellphone" placeholder="Celular" class="my-2 w-full bg-beige h-14 px-3 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-brown focus:ring-opacity-50" />
-            <textarea placeholder="Mensaje" rows="10" class="py-3 my-2 w-full bg-beige px-3 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-brown focus:ring-opacity-50"></textarea>
-            <button type="submit" class="btn-primary">Enviar</button>
+            <textarea id="message" placeholder="Mensaje" rows="10" class="py-3 my-2 w-full bg-beige px-3 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-brown focus:ring-opacity-50"></textarea>
+            <button id="btn-contact" type="submit" class="btn-primary">Enviar</button>
           </form>
         </div>
       </section>
