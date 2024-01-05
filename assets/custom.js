@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener("click", (e) => {
+
+  if (e.target.id === "btn-contact") {
+    e.preventDefault();
+    sendContact();
+  }
+
   if ((e.target.id === "a-return-policies") || (e.target.id === "a-shipping-policies")) {
     modalDiv = document.getElementById(e.target.dataset.id);
     openModal(modalDiv);
@@ -45,4 +51,38 @@ const escClose = (e) => {
   if (e.keyCode == 27) {
     closeModal(modalDiv);
   }
+};
+
+const sendContact = () => {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const cellphone =  document.getElementById('cellphone').value;
+  const message =  document.getElementById('message').value;
+
+  // console.debug(name, email, cellphone, message);
+
+  const data=`name=${name}&email=${email}&cellphone=${cellphone}&message=${message}`;
+  const request = new XMLHttpRequest();
+  request.open('POST', 'https://mlcolombia.com//wp-content/themes/miracle-leaf/contact-ajax.php', true);
+  request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+  
+  request.onreadystatechange = function() {
+    // console.debug('this.readyState', this.readyState);
+    // console.debug('this.status', this.status);
+    // console.debug('XMLHttpRequest.DONE', XMLHttpRequest.DONE);
+    if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+      const divBtn = document.getElementById('div-btn-contact');
+      divBtn.innerHTML = '¡Información enviada!';
+    } else {
+      console.debug('In process...');
+    }
+  };
+  
+  request.onerror = function() {
+    console.debug('Something went wrong');
+  };
+  
+  request.send(data);
+
+  // return false;
 };
