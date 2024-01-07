@@ -37,7 +37,9 @@ $posts = get_posts();
                 <p class="post-text pb-8">
                   <?= wp_trim_words($post->post_content, 50) ?>
                 </p>
-                <a href="<?= get_permalink($post) ?>" class="btn-primary mt-4 mb-2">Ver más</a>
+                <div class="text-center sm:text-left">
+                  <a href="<?= get_permalink($post) ?>" class="btn-primary mt-4 mb-2">Ver más</a>
+                </div>
               </div>
             </div>
 
