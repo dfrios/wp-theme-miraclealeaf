@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 .carousel-cell {
   width: 66%;
   height: 300px;
@@ -31,9 +30,16 @@
 
 
 
-/* Breakpoint Mobile */
+/* Breakpoint SM */
 @media (min-width: 640px) {
   .carousel-cell {
-    height: 500px;
+    height: 350px;
+  }
+}
+
+/* Breakpoint XL */
+@media (min-width: 1280px) {
+  .carousel-cell {
+    height: 400px;
   }
 }
