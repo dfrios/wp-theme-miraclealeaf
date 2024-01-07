@@ -33,7 +33,7 @@ $posts = get_posts();
                 <img src="<?= $thumbnail ?>" class="h-full w-full object-cover" alt="" />
               </div>
               <div class="post-content px-4 pb-12 sm:px-8 sm:w-[70%]">
-                <h1 class="post-title font-poppins font-bold my-4 sm:mt-6 lg:mt-10"><?= $post->post_title ?></h1>
+                <h1 class="text-3xl post-title font-poppins font-bold my-4 sm:mt-6 lg:mt-10"><?= $post->post_title ?></h1>
                 <p class="post-text pb-8">
                   <?= wp_trim_words($post->post_content, 50) ?>
                 </p>
