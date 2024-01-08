@@ -11,6 +11,7 @@ export default {
         'beige': '#e9e4db',
         'green': '#285855',
         'green-dark': '#293429',
+        'green-dark-transparent': '#29342921',
         'green-hover': '#33716d',
         'brown': '#b37f5f',
       },
