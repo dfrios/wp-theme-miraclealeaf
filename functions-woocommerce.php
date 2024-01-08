@@ -62,7 +62,7 @@ add_filter('woocommerce_product_loop_start', 'miracleleaf_woocommerce_product_lo
 // Add style classes to quantity input field
 function miracleleaf_woocommerce_quantity_input_classes_filter($array, $product){
 
-	return array('w-16', 'h-10', 'border-green-dark', 'border-2', 'text-center');
+	return array('w-16', 'h-10', 'border-green-dark', 'border-2', 'text-center', 'qty');
 }
 add_filter('woocommerce_quantity_input_classes', 'miracleleaf_woocommerce_quantity_input_classes_filter', 10, 2);
 
@@ -76,6 +76,57 @@ function miracleleaf_woocommerce_format_sale_price($price, $regular_price, $sale
 
 }
 add_filter('woocommerce_format_sale_price', 'miracleleaf_woocommerce_format_sale_price', 10, 3);
+
+
+
+/**
+ * @snippet       Plus Minus Quantity Buttons @ WooCommerce Single Product Page
+ * @how-to        Get CustomizeWoo.com FREE
+ * @author        Rodolfo Melogli. Taken from https://www.businessbloomer.com/woocommerce-add-plus-minus-buttons-to-add-to-cart-quantity-input/
+ * @compatible    WooCommerce 8
+ * @community     https://businessbloomer.com/club/
+ */
+ 
+ add_action( 'woocommerce_before_quantity_input_field', 'miracleleaf_display_quantity_minus' );
+ 
+ function miracleleaf_display_quantity_minus() {
+    if ( ! is_product() ) return;
+    echo '<button type="button" class="minus border-2 border-green-dark bg-green-dark-transparent rounded-lg w-7 h-10" >-</button>';
+ }
+  
+ add_action( 'woocommerce_after_quantity_input_field', 'miracleleaf_display_quantity_plus' );
+  
+ function miracleleaf_display_quantity_plus() {
+    if ( ! is_product() ) return;
+    echo '<button type="button" class="plus border-2 border-green-dark bg-green-dark-transparent rounded-lg w-7 h-10" >+</button>';
+ }
+  
+ add_action( 'woocommerce_before_single_product', 'miracleleaf_add_cart_quantity_plus_minus' );
+  
+ function miracleleaf_add_cart_quantity_plus_minus() {
+    wc_enqueue_js( "
+       $('form.cart').on( 'click', 'button.plus, button.minus', function() {
+             var qty = $( this ).closest( 'form.cart' ).find( '.qty' );
+             var val   = parseFloat(qty.val());
+             var max = parseFloat(qty.attr( 'max' ));
+             var min = parseFloat(qty.attr( 'min' ));
+             var step = parseFloat(qty.attr( 'step' ));
+             if ( $( this ).is( '.plus' ) ) {
+                if ( max && ( max <= val ) ) {
+                   qty.val( max );
+                } else {
+                   qty.val( val + step );
+                }
+             } else {
+                if ( min && ( min >= val ) ) {
+                   qty.val( min );
+                } else if ( val > 1 ) {
+                   qty.val( val - step );
+                }
+             }
+          });
+    " );
+ }
 
 
 // Disable WooCommerce styles
