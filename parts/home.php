@@ -53,16 +53,24 @@ $products = wc_get_products(array(
           <!-- BEGIN MOBILE CAROUSEL -->
           <div class="sm:z-10 sm:relative sm:mt-[-40px] hidden sm:pl-8 sm:block">
             <!-- <img src="<?php bloginfo('template_directory') ?>/assets/carousel-5YW2-63l.webp" alt="" class="rounded-lg"> -->
-            <div class="carousel" data-flickity='{ "lazyLoad": true, "autoPlay": true, "wrapAround": true }'>
-              <?php
-                foreach ($products as $product) {
-              ?>
-              <div class="carousel-cell bg-white">
-                <img class="carousel-cell-image" data-flickity-lazyload="<?= wp_get_attachment_image_url($product->get_image_id(), 'full') ?>" alt="" />
+            <!-- <div class="carousel" data-flickity='{ "lazyLoad": true, "autoPlay": true, "wrapAround": true }'> -->
+            <div class="splide h-[27rem] lg:h-[36rem]" id="carousel-products">
+              <div class="splide__track h-full">
+                <ul class="splide__list">
+                <?php
+                  foreach ($products as $product) {
+                ?>
+                <!-- <div class="carousel-cell bg-white">
+                  <img class="carousel-cell-image" data-flickity-lazyload="<?= wp_get_attachment_image_url($product->get_image_id(), 'full') ?>" alt="" />
+                </div> -->
+                <li class="splide__slide">
+                  <img src="<?= wp_get_attachment_image_url($product->get_image_id(), 'full') ?>" alt="" class="rounded-lg w-full h-full object-cover">
+                </li>
+                <?php
+                  }
+                ?>
+                </ul>
               </div>
-              <?php
-                }
-              ?>
             </div>
           </div>
           <!-- END MOBILE CAROUSEL -->
@@ -169,7 +177,7 @@ $products = wc_get_products(array(
       <!-- BEGIN TESTIMONIALS -->
       <section id="testimonios">
         <div class="max-w-7xl mx-auto sm:w-[90%] lg:w-[50%]">
-          <div class="splide">
+          <div class="splide" id="carousel-testimonials">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
