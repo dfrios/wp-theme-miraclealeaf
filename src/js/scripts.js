@@ -5,8 +5,27 @@ document.addEventListener('DOMContentLoaded', function() {
   const splideClassElement = document.getElementsByClassName('splide');
   
   if (splideClassElement.length > 0) {
-    const splide = new Splide('.splide');
-    splide.mount();
+    const splideProducts = new Splide('.splide#carousel-products', {
+      arrows :'false' ,
+      type    : 'loop',
+      // perPage : 1,
+      autoplay: true,
+      // cover: false,
+      // height : '100rem',
+      height: '100%'
+    });
+    splideProducts.mount();
+
+    const splideTestimonials = new Splide('.splide#carousel-testimonials', {
+      arrows :'false' ,
+      type    : 'loop',
+      // perPage : 1,
+      autoplay: true,
+      // cover: false,
+      // height : '100rem',
+      height: '100%'
+    });
+    splideTestimonials.mount();
   }
 });
 
