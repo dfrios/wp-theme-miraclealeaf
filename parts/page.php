@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <main id="content">
 
       <section id="cart" class="pt-12 sm:pt-20">
-        <div class="max-w-7xl mx-auto px-10">
+        <div class="max-w-7xl mx-auto px-10 sm:max-w-4xl">
 
           <?php
             the_content();

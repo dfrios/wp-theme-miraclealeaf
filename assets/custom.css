@@ -60,7 +60,9 @@ a.wc-block-components-totals-coupon-link,
 button.wc-block-components-totals-coupon__button,
 button.wc-block-components-checkout-place-order-button,
 a.wc-block-components-checkout-return-to-cart-button,
-a.added_to_cart {
+a.added_to_cart,
+#cart a.showcoupon,
+#cart button {
   display: block;
   transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   border-radius: 1.5rem;
@@ -125,6 +127,114 @@ table.wc-block-cart-items .wc-block-cart-items__header {
 	font-family: poppins !important;
 }
 
+#cart .woocommerce-notices-wrapper {
+  text-align: center;
+}
+
+#cart a.showcoupon {
+	margin-bottom: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  width: 100%;
+}
+
+#cart .wc-block-components-notice-banner {
+  text-align: center;
+}
+
+#cart form.woocommerce-form-coupon {
+  text-align: center;
+}
+
+#cart form input,
+#cart form select,
+#cart form textarea {
+  padding: .5em .5em .5em;
+  color: #2b2d2f;
+  border: 1px solid #50575e;
+  border-radius: 4px;
+  font-size: 1em;
+  line-height: 1em;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#cart input.input-radio {
+  width: 1.25rem;
+  height: 1.25rem;  
+}
+
+#cart form textarea {
+  height: 100px;
+}
+
+#cart input#coupon_code {
+  text-align: center;
+}
+
+#cart form.woocommerce-form-coupon button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#cart #payment li {
+  margin-top: 1rem;
+}
+
+#cart h3 {
+	font-family: 'Poppins';
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+#cart span.select2-selection {
+  height: 45px;
+  margin-bottom: 1rem;
+}
+
+#cart span.select2-selection__rendered {
+  padding-top: .5rem;
+}
+
+#cart #order_review  {
+	background: white;
+	border-radius: 4px;
+	box-shadow: 0px 0px 10px lightgray;
+  padding: 1rem;
+}
+
+#cart table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+#cart table td.product-total,
+#cart table tfoot td {
+  text-align: right;
+}
+
+#cart table tfoot {
+  background-color: #ececec;
+}
+
+#cart form button#place_order {
+  margin: 2rem auto;
+}
+
+#cart form div.woocommerce-terms-and-conditions-wrapper {
+  margin-top: 2rem;
+}
+
+
+/* Breakpoint LG */
+@media (min-width: 1024px) {
+  #cart a.showcoupon {
+    display: inline;
+  }
+}
 
 
 /* Breakpoint XL */
@@ -133,6 +243,7 @@ table.wc-block-cart-items .wc-block-cart-items__header {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
   }
+
   .front-article {
 	  width: 17vw;
   }
